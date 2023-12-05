@@ -1,0 +1,138 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning","heya","what's up?","how is it going?","hola","yo","how are you"],
+      "responses": ["Hello! Welcome to our online laptop store. How can I assist you today?", "Hey! It's great to see you. How can I assist you today?", 
+      "Hey there! Welcome to our online store. How can I help you?" 
+      ]
+    },
+    {
+      "tag": "services",
+      "patterns": ["Who are you","What can you do?","What services do you offer?","Tell me about your capabilities","How can you help me?","What can you assist with?",
+      "In what ways can you support me?","How can you support me" ,"List your services","What are your functions?",
+      "List your capabilities","How do you provide assistance?","What tasks can you perform?","Can you assist me"],
+      "responses": [
+        "I'm your trusty digital assistant with a bag full of tricks!<br/><br/>Here's what I can do for you:<br/><br/>-I'm here to provide laptop details, availability, and reveal the latest promotions.<br/>-I can recommend the perfect products based on your preferences.<br/>-From order ID, and I'll give you all the details about your order.(Just type 'id' and give your order id)<br/>-Wondering about product availability? Name the product, and I'll peek into our stock status for you.<br/>- Want Track orders? Just share your order reference Number, and I'll fetch the latest updates.<br/><br/>Ask me anything!"
+      ]
+    },
+    {
+      "tag": "laptops",
+      "patterns": ["laptop info","what laptops do you have","tell me about laptops","what kind of laptops you sell","what do you sell","selling products",
+      "Can you recommend me a laptop?", 
+      "Suggest me a good laptop", "what type of laptops do you have", "Find me a good laptop","Which laptop should I buy?",
+      "I need a laptop suggestion","Help me to choose a laptop","Recommend a laptop for me","Laptop recommendations, please",
+      "Laptop suggestions for my work","Show me laptop options", "Laptops for gaming","laptops for students",
+      "any laptop recommentations", "Find information about","laptop details","laptop information"],
+      "responses": ["Hey! Let's explore the best laptops that suit for your needs.<br/>We have a variety of models to choose from.<br/><br/>Lenovo<br/>Asus<br/>HP ProBook<br/>Acer<br/>Apple Macbook<br/>MSI<br/><br/>which laptop are you interested in?<br/>"]
+    },
+    {
+      "tag": "laptop_brands",
+      "patterns": [ "Show me laptop brands","laptop brands",
+                    "Tell me about popular laptop brands",
+                    "List of laptop brands",            
+                    "I'm looking for laptop brands",
+                    "Give me options from laptop manufacturers",
+                    "Brands of laptops",                  
+                    "Share some laptop brands with me"],
+      "responses": ["Curious about laptop brands?<br/><br/>I'll share some details with you.These are the brands we have.<br/><br/>Lenovo<br/>Asus<br/>MSI<br/>HP ProBook<br/>Acer<br/>Apple Macbook.<br/><br/>which laptop brand are you interested in?<br/>"]
+    },
+    {
+      "tag": "promotion_info",
+      "patterns": ["promotions", "What discounts are available?", "Any special offers?", "Promotions and discounts","Are there any deals?",
+                    "Tell me about current promotions",
+                    "Show me the latest discounts",
+                    "Promotional offers",
+                    "Discounts on products",
+                    "Special deals",            
+                    "Discounted products",
+                    "Deals and discounts",
+                    "Share current promotions","what are the laptops that gives promotions"],
+      "responses": ["You're about to discover the hottest discounts on our products.<br/>Currently we give promotions for these laptops.<br/><br/>Lenova laptops-Save upto 30%<br/>Asus laptops-Save upto 25%'"],
+      "context_set": "promotion_info"
+    },
+    {
+      "tag": "order_info",
+      "patterns": ["What can you", "Give me details on my order", "Find information about my order","Check my order status",
+                    "Order details",
+                    "Tell me about my order",
+                    "I want to know about my order",
+                    "Can you provide order information?",
+                    "Share my order details",
+                    "What's the status of my order?",
+                    "Order status update",
+                    "Give me the details of my recent order",
+                    "Check my recent purchase"],
+      "responses": ["To get information about your order just type your order id.<br/>(must type : 'id' before you enter your order id)"],
+      "context_set": "order_info"
+    },
+    {
+      "tag": "order_status",
+      "patterns": ["Give me details on my order status", "Find information about my order","Check my order status",
+                    "Where is my order?",
+                    "Track my order",
+                    "Why is my order late?",
+                    "My order is delayed",
+                    "When will my late order arrive?",
+                    "Late delivery inquiry",
+                    "is it shipped?",
+                    "Has my order been shipped?",
+                    "Did you ship my order?",
+                    "Order shipment status",
+                    "Check my package location"                    
+                   ],
+      "responses": ["Certainly, to track your order status just type your order reference number. (sample : LU0xx )"],
+      "context_set": "order_status"
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thank you", "Thanks a lot", "Appreciate your help", "You're awesome", "I'm thankful",
+      "You've been so helpful",
+      "I appreciate it",
+      "Big thanks to you"],
+      "responses": ["You're welcome! If you have more questions, feel free to ask.", "It was my pleasure assisting you. Don't hesitate to ask if you need anything else."]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Goodbye", "See you later", "Bye for now", "Farewell", "good bye","take care"],
+      "responses": ["Goodbye! Have a great day.", "Take care and have a wonderful day!"]
+    },
+    {
+      "tag": "fallback",
+      "patterns": ["Sorry, I don't know", "I'm not sure", "Can you repeat that?", "I didn't understand"],
+      "responses": ["I apologize, but I couldn't understand your request. Please try again or ask something else.", "I'm sorry, I couldn't catch that. Can you please rephrase your question?"]
+    },
+    {
+      "tag": "order_reference_no",
+      "patterns": ["My order reference no is", "this is my order reference no "],
+      "responses": ["Let me check the status for you.Provide me your order reference number"],
+      "context_filter": "order_reference_no"
+    },
+    {
+      "tag": "input_error",
+      "patterns": ["INPUT_ERROR"],
+      "responses": ["I'm sorry, I couldn't comprehend that. Could you please rephrase or ask a different question."],
+      "context_filter": "input_error"
+    },
+    {
+      "tag": "payment",
+      "patterns": ["What payment methods are accepted?",
+              "How can I pay for my order?",
+              "Accepted payment options",
+              "Payment methods available",
+              "Which payment methods can I use?",
+              "How to make a payment",
+              "Payment options",
+              "Can I pay with a credit card?",            
+              "Pay with a Visa/MasterCard",           
+              "PayPal payment",
+              "How to pay via bank transfer?",         
+              "Bank payment method",
+              "Bank account transfer for payment",
+              "Online banking payment"
+    ],
+      "responses": ["You can pay for your order using credit cards and bank transfers.", "Our accepted payment options include credit cards and bank transfers."],
+      "context_filter": "payment"
+    }
+  ]
+}
